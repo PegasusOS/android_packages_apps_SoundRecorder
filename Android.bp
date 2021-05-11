@@ -2,4 +2,12 @@ android_app {
     name: "SoundRecorder",
     srcs: ["**/*.java"],
     sdk_version: "current",
+    required: ["privapp_whitelist_com.android.soundrecorder"],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_com.android.soundrecorder",
+    src: "privapp_whitelist_com.android.soundrecorder.xml",
+    sub_dir: "permissions",
+    filename_from_src: true,
 }
